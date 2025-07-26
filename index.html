@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Blizz Media E-Ticket Scanner</title>
+  <link rel="stylesheet" href="recieve.css"/>
+</head>
+<body>
+  <header class="header">
+    <h1>Blizz Media E-Ticket Scanner</h1>
+    <p>Scan and authenticate secure tickets with encrypted QR codes</p>
+  </header>
+
+  <section class="scan_panel">
+    <h2 id="maintext">Waiting for scan…</h2>
+    <p id="sectext">&nbsp;</p>
+    <div class="button_grp">
+      <button id="camera">Open Camera</button>
+      <button id="download">Download</button>
+    </div>
+  </section>
+
+  <div id="vid"></div>
+
+  <!-- FULL-SCREEN FLASH OVERLAY -->
+  <div id="scan-flash" class="hidden"></div>
+
+  <!-- MODULAR POPUP -->
+  <div id="scan-popup" class="hidden">
+    <div class="scan-popup-content">
+      <span id="scan-icon"></span>
+      <div id="scan-text"></div>
+      <button id="scan-close">OK</button>
+    </div>
+  </div>
+
+  <script src="jsQR.js"></script>
+  <script src="crypto-js.js"></script>
+  <script type="module" src="db.js"></script>
+  <script src="recieve.js"></script>
+</body>
+</html>

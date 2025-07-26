@@ -27,7 +27,7 @@ function doFlash(ok) {
 // 4) Popup
 function showScanPopup(ok, message) {
   popupEl.className = `show ${ok ? "success" : "error"}`;
-  iconEl.innerHTML  = ok ? "✔︎" : "✖︎";
+
   scanTextEl.textContent = message;
 }
 
